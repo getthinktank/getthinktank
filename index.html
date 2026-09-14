@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Think Tank</title>
-<meta name="description" content="Think Tank is an independent software studio. We build focused products for people whose work is usually underserved by software — starting with OurCharter for member-run organizations, with fire-department and homeschooling software in development.">
+<meta name="description" content="Think Tank is an independent software studio. We build focused, durable products that do one job properly — starting with OurCharter, governance and membership software for member-run organizations.">
 <meta property="og:title" content="Think Tank">
 <meta property="og:description" content="An independent software studio. Focused products for people doing real work.">
 <meta property="og:url" content="https://getthinktank.com">
@@ -56,7 +56,7 @@
   .section-head p{color:var(--ink-2);margin:0;font-size:1.05rem}
 
   .products{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,26rem));gap:1.5rem}
   .product{display:flex;flex-direction:column;padding:1.6rem;border-radius:.9rem;border:1px solid var(--line);background:var(--paper)}
   .product .status{display:inline-block;align-self:flex-start;font-weight:600;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-bottom:.9rem}
   .status.live{background:var(--accent-soft);color:var(--accent)}
@@ -113,9 +113,9 @@
       <div>
         <div class="eyebrow">Think Tank · Independent software studio</div>
         <h1>Focused software for people doing real work.</h1>
-        <p>We build small, serious products for communities the software industry tends to skip — volunteer boards, fire departments, families teaching at home. Each one does a specific job properly, respects the people using it, and keeps working year after year.</p>
+        <p>We build small, serious products, each shaped around one kind of work and the people who do it. Every one is meant to do its job properly, respect the people using it, and keep working year after year.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#products">What we're building</a>
+          <a class="btn btn-primary" href="https://ourcharter.org">See OurCharter</a>
           <a class="btn btn-ghost" href="#approach">How we work</a>
         </div>
       </div>
@@ -126,8 +126,8 @@
   <section class="products" id="products">
     <div class="wrap">
       <div class="section-head">
-        <h2>What we're building</h2>
-        <p>One product available today, two more in development, and a longer list behind them.</p>
+        <h2>Products</h2>
+        <p>OurCharter is available today. More is in the works.</p>
       </div>
       <div class="product-grid">
         <div class="product">
@@ -143,26 +143,8 @@
           </ul>
           <a class="more" href="https://ourcharter.org">ourcharter.org →</a>
         </div>
-        <div class="product">
-          <span class="status dev">In development</span>
-          <h3>For fire departments</h3>
-          <p>Operations software for volunteer and combination fire departments — the training, equipment, availability and records that a department has to keep straight, without a full-time administrator to keep them.</p>
-          <ul>
-            <li>Built with departments, not for them</li>
-            <li>Details to follow</li>
-          </ul>
-        </div>
-        <div class="product">
-          <span class="status dev">In development</span>
-          <h3>For homeschooling</h3>
-          <p>Planning and record-keeping for families teaching at home — the plans, progress and portfolios that families, co-ops and reviewers need, kept simple enough to actually maintain.</p>
-          <ul>
-            <li>Family-first, no data brokering</li>
-            <li>Details to follow</li>
-          </ul>
-        </div>
       </div>
-      <p class="more-note">More on the way. If your community's work is underserved by software, we'd like to hear about it.</p>
+      <p class="more-note">Further products will appear here as they are released.</p>
     </div>
   </section>
 
@@ -174,7 +156,7 @@
       </div>
       <div class="principles">
         <div class="principle"><div class="n">01</div><h3>One job, done properly</h3><p>Each product exists to do a specific thing well for a specific group of people. We would rather be essential to a few than adequate for everyone.</p></div>
-        <div class="principle"><div class="n">02</div><h3>The user's data is the user's</h3><p>Records belong to the people who made them. We don't sell information, we don't run ads, and nobody hears from us or our customers without having asked to.</p></div>
+        <div class="principle"><div class="n">02</div><h3>Your data is yours</h3><p>Records belong to the people who made them. We don't sell information, we don't run ads, and nobody hears from us or our customers without having asked to. There is no lock-in: your data is yours to download in full, in open formats, whenever you like — including on the way out.</p></div>
         <div class="principle"><div class="n">03</div><h3>Built to last</h3><p>The people we build for have day jobs and long memories. Software for them has to be dependable, understandable, and still here next year.</p></div>
       </div>
     </div>
@@ -183,7 +165,7 @@
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>Talk to us</h2>
-      <p>Questions about a product, a partnership, or a community that needs better tools — we read every message.</p>
+      <p>Questions about a product or a partnership — we read every message.</p>
       <a class="btn btn-primary" href="mailto:support@ourcharter.org">support@ourcharter.org</a>
     </div>
   </section>
