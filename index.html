@@ -3,55 +3,177 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Think Tank LLC</title>
-<meta name="description" content="Think Tank LLC is a Kentucky software company. We build OurCharter, governance and membership software for volunteer-run organizations.">
+<title>Think Tank</title>
+<meta name="description" content="Think Tank builds software for organizations that run on volunteers. Makers of OurCharter — governance and membership software for clubs, congregations, associations and nonprofits.">
+<meta property="og:title" content="Think Tank">
+<meta property="og:description" content="Software for organizations that run on volunteers. Makers of OurCharter.">
+<meta property="og:url" content="https://getthinktank.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#1d4ed8; }
-  * { box-sizing: border-box; }
-  body { margin:0; font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; }
-  main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
-  h1 { font-size: 2rem; margin: 0 0 .25rem; letter-spacing:-.01em; }
-  .tag { color: var(--muted); margin: 0 0 2.5rem; }
-  h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing:.06em; color: var(--muted); margin: 2.5rem 0 .75rem; }
-  a { color: var(--accent); }
-  .card { border:1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; }
-  .card h3 { margin:0 0 .25rem; font-size:1.15rem; }
-  .card p { margin:.25rem 0 .75rem; }
-  dl { display:grid; grid-template-columns: 9rem 1fr; gap:.35rem 1rem; margin:0; }
-  dt { color: var(--muted); }
-  dd { margin:0; }
-  footer { margin-top: 3rem; padding-top: 1.25rem; border-top:1px solid var(--line); color: var(--muted); font-size:.9rem; }
-  @media (max-width:32rem){ dl{grid-template-columns:1fr} dt{margin-top:.5rem} }
+  :root{
+    --ink:#14181f; --ink-2:#3b4250; --muted:#6b7280; --line:#e7e9ee;
+    --paper:#fbfaf7; --card:#ffffff; --accent:#1f4e3d; --accent-ink:#ffffff; --accent-soft:#e8f0ec;
+    --max:72rem;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+  h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.015em;margin:0}
+
+  header{position:sticky;top:0;background:rgba(251,250,247,.85);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent;z-index:5}
+  header.scrolled{border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:4.25rem}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:600;letter-spacing:.01em}
+  .mark{width:1.75rem;height:1.75rem;border-radius:.5rem;background:var(--accent);position:relative}
+  .mark::after{content:"";position:absolute;inset:.45rem;border:2px solid #fff;border-radius:.2rem;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(45deg)}
+  .nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+  .nav a.link{text-decoration:none;color:var(--ink-2);font-size:.95rem}
+  .nav a.link:hover{color:var(--ink)}
+
+  .hero{padding:6.5rem 0 5rem}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4.25rem);line-height:1.05;max-width:16ch;margin:1rem 0 1.25rem}
+  .hero p{font-size:1.2rem;color:var(--ink-2);max-width:38rem;margin:0 0 2rem}
+  .actions{display:flex;gap:.75rem;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.15rem;border-radius:.6rem;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid transparent}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-ghost{border-color:var(--line);background:#fff;color:var(--ink)}
+  .btn-ghost:hover{border-color:#cfd4dc}
+
+  section{padding:4.5rem 0}
+  .section-head{max-width:40rem;margin-bottom:2.25rem}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.15;margin-bottom:.75rem}
+  .section-head p{color:var(--ink-2);margin:0;font-size:1.05rem}
+
+  .product{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .product-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start}
+  .product-copy h2{font-size:clamp(1.9rem,3.4vw,2.75rem);line-height:1.1;margin-bottom:1rem}
+  .product-copy p{color:var(--ink-2);font-size:1.05rem}
+  .pill{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.8rem;padding:.25rem .6rem;border-radius:999px;margin-bottom:1rem}
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0;padding:0;list-style:none}
+  .features li{border:1px solid var(--line);border-radius:.75rem;padding:1rem 1.1rem;background:var(--paper)}
+  .features strong{display:block;font-weight:600;margin-bottom:.15rem}
+  .features span{color:var(--muted);font-size:.93rem}
+
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .principle{padding:1.5rem;border-radius:.9rem;background:var(--card);border:1px solid var(--line)}
+  .principle .n{font-family:Fraunces,Georgia,serif;font-size:1.6rem;color:var(--accent);margin-bottom:.5rem}
+  .principle h3{font-size:1.15rem;margin-bottom:.4rem}
+  .principle p{margin:0;color:var(--ink-2);font-size:.97rem}
+
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(1.7rem,3vw,2.35rem);margin-bottom:.75rem}
+  .contact p{color:var(--ink-2);max-width:34rem;margin:0 auto 1.5rem}
+
+  footer{border-top:1px solid var(--line);padding:2.25rem 0 2.75rem;color:var(--muted);font-size:.85rem}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;align-items:flex-start}
+  .foot p{margin:.15rem 0}
+  .foot .links a{margin-right:1rem;text-decoration:none;color:var(--muted)}
+  .foot .links a:hover{color:var(--ink)}
+  .fine{margin-top:1.25rem;font-size:.78rem;color:#8b919c;max-width:60rem}
+
+  @media (max-width:52rem){
+    .product-grid,.principles{grid-template-columns:1fr}
+    .features{grid-template-columns:1fr}
+    .hero{padding:4.5rem 0 3.5rem}
+    .nav ul{display:none}
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>Think Tank LLC</h1>
-  <p class="tag">A Kentucky software company.</p>
-
-  <p>We design and operate software for organizations that run on volunteers — the clubs, congregations, associations and nonprofits whose secretaries and treasurers keep everything going. Our work focuses on governance done properly: records that hold up, decisions that are traceable, and communication members actually consented to.</p>
-
-  <h2>Product</h2>
-  <div class="card">
-    <h3><a href="https://ourcharter.org">OurCharter</a></h3>
-    <p>Membership and governance software: elections with vote receipts, meeting minutes, bylaws, committees, documents with an audit trail, member communications by email and text, and a public website for each organization. Available on the web and as a mobile app.</p>
-    <p><a href="https://ourcharter.org">ourcharter.org</a> · <a href="https://ourcharter.org/terms">Terms</a> · <a href="https://ourcharter.org/privacy">Privacy</a> · <a href="https://ourcharter.org/sms-terms">Text Message Terms</a></p>
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Think Tank home"><span class="mark" aria-hidden="true"></span>Think Tank</a>
+    <ul>
+      <li><a class="link" href="#product">Product</a></li>
+      <li><a class="link" href="#approach">Approach</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
   </div>
+</header>
 
-  <h2>Company</h2>
-  <dl>
-    <dt>Legal name</dt><dd>Think Tank LLC</dd>
-    <dt>Registered in</dt><dd>Kentucky, United States</dd>
-    <dt>Address</dt><dd>212 N. 2nd St., Ste 100<br>Richmond, KY 40475</dd>
-    <dt>Contact</dt><dd><a href="mailto:support@ourcharter.org">support@ourcharter.org</a></dd>
-    <dt>Brands</dt><dd>OurCharter is a service of Think Tank LLC.</dd>
-  </dl>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Think Tank · Richmond, Kentucky</div>
+      <h1>Software for the organizations that run on volunteers.</h1>
+      <p>Clubs, congregations, associations and small nonprofits are held together by a secretary, a treasurer and a few people who care. We build the tools that make their work hold up — clear records, traceable decisions, and communication members actually asked for.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://ourcharter.org">See OurCharter</a>
+        <a class="btn btn-ghost" href="#approach">How we work</a>
+      </div>
+    </div>
+  </section>
 
-  <h2>Messaging</h2>
-  <p>Text messages sent through our products go only to people who opted in, name the organization they are from, and honor STOP immediately. Details: <a href="https://ourcharter.org/sms-terms">Text Message Terms</a> and <a href="https://ourcharter.org/privacy">Privacy Policy</a>. Mobile information is never shared with third parties or affiliates for marketing purposes.</p>
+  <section class="product" id="product">
+    <div class="wrap product-grid">
+      <div class="product-copy">
+        <span class="pill">Our product</span>
+        <h2>OurCharter</h2>
+        <p>Governance and membership software for member-run organizations. Elections with vote receipts, minutes, bylaws, committees and documents with an audit trail — plus member communications and a public website for each organization, on the web and in a mobile app.</p>
+        <p><a class="btn btn-primary" href="https://ourcharter.org">Visit ourcharter.org</a></p>
+      </div>
+      <ul class="features">
+        <li><strong>Elections that hold up</strong><span>Secret ballots, vote receipts, quorum evaluated at close.</span></li>
+        <li><strong>Minutes &amp; bylaws</strong><span>Versioned records with a full audit trail.</span></li>
+        <li><strong>Committees &amp; tasks</strong><span>Workspaces, sign-up sheets, shared documents.</span></li>
+        <li><strong>Member communications</strong><span>Email and text announcements, opt-in only, STOP honored.</span></li>
+        <li><strong>Public website</strong><span>Each organization gets its own site and domain.</span></li>
+        <li><strong>Mobile app</strong><span>iOS and Android, first-class.</span></li>
+      </ul>
+    </div>
+  </section>
 
-  <footer>&copy; <span id="y"></span> Think Tank LLC. All rights reserved.</footer>
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How we work</h2>
+        <p>Three commitments that shape everything we ship.</p>
+      </div>
+      <div class="principles">
+        <div class="principle"><div class="n">01</div><h3>Records first</h3><p>A decision you can't reconstruct later didn't really happen. Every action that matters leaves a trail the organization owns.</p></div>
+        <div class="principle"><div class="n">02</div><h3>Consent before contact</h3><p>People hear from their organization because they chose to. No harvested lists, no surprise texts, and an exit that's one tap away.</p></div>
+        <div class="principle"><div class="n">03</div><h3>Built for the volunteer</h3><p>The treasurer has a day job. If it takes a manual to use, we haven't finished designing it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Talk to us</h2>
+      <p>Questions about OurCharter, partnerships, or anything else — we read every message.</p>
+      <a class="btn btn-primary" href="mailto:support@ourcharter.org">support@ourcharter.org</a>
+    </div>
+  </section>
 </main>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p><strong style="color:var(--ink-2)">Think Tank LLC</strong></p>
+        <p>212 N. 2nd St., Ste 100, Richmond, KY 40475</p>
+        <p>OurCharter is a service of Think Tank LLC.</p>
+      </div>
+      <div class="links">
+        <a href="https://ourcharter.org">OurCharter</a>
+        <a href="https://ourcharter.org/terms">Terms</a>
+        <a href="https://ourcharter.org/privacy">Privacy</a>
+        <a href="https://ourcharter.org/sms-terms">Text Message Terms</a>
+      </div>
+    </div>
+    <p class="fine">Text messages sent through our products go only to people who opted in, name the organization they are from, and honor STOP immediately. Mobile information is not shared with third parties or affiliates for marketing or promotional purposes. &copy; <span id="y"></span> Think Tank LLC.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const h = document.querySelector('header');
+  addEventListener('scroll', () => h.classList.toggle('scrolled', scrollY > 8), { passive: true });
+</script>
 </body>
 </html>
