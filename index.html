@@ -166,7 +166,7 @@
     <div class="wrap">
       <h2>Talk to us</h2>
       <p>Questions about a product or a partnership — we read every message.</p>
-      <a class="btn btn-primary" href="mailto:support@ourcharter.org">support@ourcharter.org</a>
+      <a class="btn btn-primary" id="contact-link" href="#contact" data-u="support" data-d="getthinktank.com">Email us</a>
     </div>
   </section>
 </main>
@@ -190,6 +190,11 @@
 </footer>
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
+  // The address is assembled here rather than written in the markup, so the
+  // page reads normally for people while naive harvesters see nothing to take.
+  const c = document.getElementById('contact-link');
+  const addr = c.dataset.u + String.fromCharCode(64) + c.dataset.d;
+  c.href = 'mailto:' + addr; c.textContent = addr;
   const h = document.querySelector('header');
   addEventListener('scroll', () => h.classList.toggle('scrolled', scrollY > 8), { passive: true });
 </script>
