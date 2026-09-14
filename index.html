@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Think Tank</title>
-<meta name="description" content="Think Tank builds software for organizations that run on volunteers. Makers of OurCharter — governance and membership software for clubs, congregations, associations and nonprofits.">
+<meta name="description" content="Think Tank is an independent software studio. We build focused products for people whose work is usually underserved by software — starting with OurCharter for member-run organizations, with fire-department and homeschooling software in development.">
 <meta property="og:title" content="Think Tank">
-<meta property="og:description" content="Software for organizations that run on volunteers. Makers of OurCharter.">
+<meta property="og:description" content="An independent software studio. Focused products for people doing real work.">
 <meta property="og:url" content="https://getthinktank.com">
+<meta property="og:image" content="https://getthinktank.com/logo-512.png">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:image" content="https://getthinktank.com/logo-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#14181f; --ink-2:#3b4250; --muted:#6b7280; --line:#e7e9ee;
@@ -26,12 +26,12 @@
   body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-  h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.015em;margin:0;color:var(--navy)}
+  h1,h2,h3{font-family:Manrope,Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:-.02em;margin:0;color:var(--navy)}
 
   header{position:sticky;top:0;background:rgba(251,250,247,.85);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent;z-index:5}
   header.scrolled{border-color:var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:4.25rem}
-  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:600;letter-spacing:.01em}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:Manrope,Inter,sans-serif;font-weight:700;letter-spacing:-.01em}
   .mark{width:2.1rem;height:2.1rem;display:block}
   .nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
   .nav a.link{text-decoration:none;color:var(--ink-2);font-size:.95rem}
@@ -41,7 +41,7 @@
   .hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:3rem;align-items:center}
   .hero-art{justify-self:center;width:min(100%,22rem);height:auto;filter:drop-shadow(0 18px 40px rgba(11,31,67,.16))}
   .eyebrow{color:var(--accent);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
-  .hero h1{font-size:clamp(2.4rem,5.2vw,4.25rem);line-height:1.05;max-width:16ch;margin:1rem 0 1.25rem}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4.1rem);line-height:1.05;max-width:17ch;margin:1rem 0 1.25rem;font-weight:800}
   .hero p{font-size:1.2rem;color:var(--ink-2);max-width:38rem;margin:0 0 2rem}
   .actions{display:flex;gap:.75rem;flex-wrap:wrap}
   .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.15rem;border-radius:.6rem;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid transparent}
@@ -55,19 +55,23 @@
   .section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.15;margin-bottom:.75rem}
   .section-head p{color:var(--ink-2);margin:0;font-size:1.05rem}
 
-  .product{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .product-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start}
-  .product-copy h2{font-size:clamp(1.9rem,3.4vw,2.75rem);line-height:1.1;margin-bottom:1rem}
-  .product-copy p{color:var(--ink-2);font-size:1.05rem}
-  .pill{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.8rem;padding:.25rem .6rem;border-radius:999px;margin-bottom:1rem}
-  .features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0;padding:0;list-style:none}
-  .features li{border:1px solid var(--line);border-radius:.75rem;padding:1rem 1.1rem;background:var(--paper)}
-  .features strong{display:block;font-weight:600;margin-bottom:.15rem}
-  .features span{color:var(--muted);font-size:.93rem}
+  .products{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .product{display:flex;flex-direction:column;padding:1.6rem;border-radius:.9rem;border:1px solid var(--line);background:var(--paper)}
+  .product .status{display:inline-block;align-self:flex-start;font-weight:600;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-bottom:.9rem}
+  .status.live{background:var(--accent-soft);color:var(--accent)}
+  .status.dev{background:#f1f3f6;color:var(--muted)}
+  .product h3{font-size:1.3rem;margin-bottom:.4rem}
+  .product p{margin:0 0 1rem;color:var(--ink-2);font-size:.97rem;flex:1}
+  .product ul{margin:0 0 1.1rem;padding-left:1.1rem;color:var(--muted);font-size:.9rem}
+  .product li{margin:.15rem 0}
+  .product a.more{font-weight:600;text-decoration:none;color:var(--accent)}
+  .product a.more:hover{text-decoration:underline}
+  .more-note{margin:1.75rem 0 0;color:var(--muted);font-size:.95rem}
 
   .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
   .principle{padding:1.5rem;border-radius:.9rem;background:var(--card);border:1px solid var(--line)}
-  .principle .n{font-family:Fraunces,Georgia,serif;font-size:1.6rem;color:var(--accent);margin-bottom:.5rem}
+  .principle .n{font-family:Manrope,Inter,sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent);margin-bottom:.5rem}
   .principle h3{font-size:1.15rem;margin-bottom:.4rem}
   .principle p{margin:0;color:var(--ink-2);font-size:.97rem}
 
@@ -84,7 +88,6 @@
 
   @media (max-width:52rem){
     .product-grid,.principles{grid-template-columns:1fr}
-    .features{grid-template-columns:1fr}
     .hero{padding:4.5rem 0 3.5rem}
     .hero .wrap{grid-template-columns:1fr}
     .hero-art{width:9rem;justify-self:start;order:-1;filter:none}
@@ -97,7 +100,7 @@
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Think Tank home"><img class="mark" src="logo-512.png" alt="" width="34" height="34">Think Tank</a>
     <ul>
-      <li><a class="link" href="#product">Product</a></li>
+      <li><a class="link" href="#products">Products</a></li>
       <li><a class="link" href="#approach">Approach</a></li>
       <li><a class="link" href="#contact">Contact</a></li>
     </ul>
@@ -108,34 +111,58 @@
   <section class="hero">
     <div class="wrap">
       <div>
-      <div class="eyebrow">Think Tank · Software for member organizations</div>
-      <h1>Software for the organizations that run on volunteers.</h1>
-      <p>Clubs, congregations, associations and small nonprofits are held together by a secretary, a treasurer and a few people who care. We build the tools that make their work hold up — clear records, traceable decisions, and communication members actually asked for.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://ourcharter.org">See OurCharter</a>
-        <a class="btn btn-ghost" href="#approach">How we work</a>
-      </div>
+        <div class="eyebrow">Think Tank · Independent software studio</div>
+        <h1>Focused software for people doing real work.</h1>
+        <p>We build small, serious products for communities the software industry tends to skip — volunteer boards, fire departments, families teaching at home. Each one does a specific job properly, respects the people using it, and keeps working year after year.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#products">What we're building</a>
+          <a class="btn btn-ghost" href="#approach">How we work</a>
+        </div>
       </div>
       <img class="hero-art" src="logo.png" alt="Think Tank phoenix" width="1075" height="1075">
     </div>
   </section>
 
-  <section class="product" id="product">
-    <div class="wrap product-grid">
-      <div class="product-copy">
-        <span class="pill">Our product</span>
-        <h2>OurCharter</h2>
-        <p>Governance and membership software for member-run organizations. Elections with vote receipts, minutes, bylaws, committees and documents with an audit trail — plus member communications and a public website for each organization, on the web and in a mobile app.</p>
-        <p><a class="btn btn-primary" href="https://ourcharter.org">Visit ourcharter.org</a></p>
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we're building</h2>
+        <p>One product available today, two more in development, and a longer list behind them.</p>
       </div>
-      <ul class="features">
-        <li><strong>Elections that hold up</strong><span>Secret ballots, vote receipts, quorum evaluated at close.</span></li>
-        <li><strong>Minutes &amp; bylaws</strong><span>Versioned records with a full audit trail.</span></li>
-        <li><strong>Committees &amp; tasks</strong><span>Workspaces, sign-up sheets, shared documents.</span></li>
-        <li><strong>Member communications</strong><span>Email and text announcements, opt-in only, STOP honored.</span></li>
-        <li><strong>Public website</strong><span>Each organization gets its own site and domain.</span></li>
-        <li><strong>Mobile app</strong><span>iOS and Android, first-class.</span></li>
-      </ul>
+      <div class="product-grid">
+        <div class="product">
+          <span class="status live">Available</span>
+          <h3>OurCharter</h3>
+          <p>Governance and membership software for member-run organizations — clubs, congregations, associations and nonprofits.</p>
+          <ul>
+            <li>Elections with vote receipts</li>
+            <li>Minutes, bylaws and an audit trail</li>
+            <li>Committees, tasks and sign-up sheets</li>
+            <li>Opt-in email and text announcements</li>
+            <li>A public website and a mobile app</li>
+          </ul>
+          <a class="more" href="https://ourcharter.org">ourcharter.org →</a>
+        </div>
+        <div class="product">
+          <span class="status dev">In development</span>
+          <h3>For fire departments</h3>
+          <p>Operations software for volunteer and combination fire departments — the training, equipment, availability and records that a department has to keep straight, without a full-time administrator to keep them.</p>
+          <ul>
+            <li>Built with departments, not for them</li>
+            <li>Details to follow</li>
+          </ul>
+        </div>
+        <div class="product">
+          <span class="status dev">In development</span>
+          <h3>For homeschooling</h3>
+          <p>Planning and record-keeping for families teaching at home — the plans, progress and portfolios that families, co-ops and reviewers need, kept simple enough to actually maintain.</p>
+          <ul>
+            <li>Family-first, no data brokering</li>
+            <li>Details to follow</li>
+          </ul>
+        </div>
+      </div>
+      <p class="more-note">More on the way. If your community's work is underserved by software, we'd like to hear about it.</p>
     </div>
   </section>
 
@@ -143,12 +170,12 @@
     <div class="wrap">
       <div class="section-head">
         <h2>How we work</h2>
-        <p>Three commitments that shape everything we ship.</p>
+        <p>Three commitments that hold across everything we ship.</p>
       </div>
       <div class="principles">
-        <div class="principle"><div class="n">01</div><h3>Records first</h3><p>A decision you can't reconstruct later didn't really happen. Every action that matters leaves a trail the organization owns.</p></div>
-        <div class="principle"><div class="n">02</div><h3>Consent before contact</h3><p>People hear from their organization because they chose to. No harvested lists, no surprise texts, and an exit that's one tap away.</p></div>
-        <div class="principle"><div class="n">03</div><h3>Built for the volunteer</h3><p>The treasurer has a day job. If it takes a manual to use, we haven't finished designing it.</p></div>
+        <div class="principle"><div class="n">01</div><h3>One job, done properly</h3><p>Each product exists to do a specific thing well for a specific group of people. We would rather be essential to a few than adequate for everyone.</p></div>
+        <div class="principle"><div class="n">02</div><h3>The user's data is the user's</h3><p>Records belong to the people who made them. We don't sell information, we don't run ads, and nobody hears from us or our customers without having asked to.</p></div>
+        <div class="principle"><div class="n">03</div><h3>Built to last</h3><p>The people we build for have day jobs and long memories. Software for them has to be dependable, understandable, and still here next year.</p></div>
       </div>
     </div>
   </section>
@@ -156,7 +183,7 @@
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>Talk to us</h2>
-      <p>Questions about OurCharter, partnerships, or anything else — we read every message.</p>
+      <p>Questions about a product, a partnership, or a community that needs better tools — we read every message.</p>
       <a class="btn btn-primary" href="mailto:support@ourcharter.org">support@ourcharter.org</a>
     </div>
   </section>
@@ -167,7 +194,7 @@
     <div class="foot">
       <div>
         <p><strong style="color:var(--ink-2)">Think Tank LLC</strong></p>
-        <p>OurCharter is a service of Think Tank LLC.</p>
+        <p>An independent software studio.</p>
       </div>
       <div class="links">
         <a href="https://ourcharter.org">OurCharter</a>
@@ -176,7 +203,7 @@
         <a href="https://ourcharter.org/sms-terms">Text Message Terms</a>
       </div>
     </div>
-    <p class="fine">Text messages sent through our products go only to people who opted in, name the organization they are from, and honor STOP immediately. Mobile information is not shared with third parties or affiliates for marketing or promotional purposes. &copy; <span id="y"></span> Think Tank LLC.</p>
+    <p class="fine">&copy; <span id="y"></span> Think Tank LLC. All rights reserved. Think Tank, OurCharter, and the names and marks of our other products and services, whether released or in development, are trademarks of Think Tank LLC. Messages sent through our products go only to people who opted in, identify who they are from, and honor STOP immediately; mobile information is not shared with third parties or affiliates for marketing or promotional purposes.</p>
   </div>
 </footer>
 <script>
