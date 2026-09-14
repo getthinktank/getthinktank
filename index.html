@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Think Tank LLC</title>
+<meta name="description" content="Think Tank LLC is a Kentucky software company. We build OurCharter, governance and membership software for volunteer-run organizations.">
+<style>
+  :root { color-scheme: light; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#1d4ed8; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+  h1 { font-size: 2rem; margin: 0 0 .25rem; letter-spacing:-.01em; }
+  .tag { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing:.06em; color: var(--muted); margin: 2.5rem 0 .75rem; }
+  a { color: var(--accent); }
+  .card { border:1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; }
+  .card h3 { margin:0 0 .25rem; font-size:1.15rem; }
+  .card p { margin:.25rem 0 .75rem; }
+  dl { display:grid; grid-template-columns: 9rem 1fr; gap:.35rem 1rem; margin:0; }
+  dt { color: var(--muted); }
+  dd { margin:0; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top:1px solid var(--line); color: var(--muted); font-size:.9rem; }
+  @media (max-width:32rem){ dl{grid-template-columns:1fr} dt{margin-top:.5rem} }
+</style>
+</head>
+<body>
+<main>
+  <h1>Think Tank LLC</h1>
+  <p class="tag">A Kentucky software company.</p>
+
+  <p>We design and operate software for organizations that run on volunteers — the clubs, congregations, associations and nonprofits whose secretaries and treasurers keep everything going. Our work focuses on governance done properly: records that hold up, decisions that are traceable, and communication members actually consented to.</p>
+
+  <h2>Product</h2>
+  <div class="card">
+    <h3><a href="https://ourcharter.org">OurCharter</a></h3>
+    <p>Membership and governance software: elections with vote receipts, meeting minutes, bylaws, committees, documents with an audit trail, member communications by email and text, and a public website for each organization. Available on the web and as a mobile app.</p>
+    <p><a href="https://ourcharter.org">ourcharter.org</a> · <a href="https://ourcharter.org/terms">Terms</a> · <a href="https://ourcharter.org/privacy">Privacy</a> · <a href="https://ourcharter.org/sms-terms">Text Message Terms</a></p>
+  </div>
+
+  <h2>Company</h2>
+  <dl>
+    <dt>Legal name</dt><dd>Think Tank LLC</dd>
+    <dt>Registered in</dt><dd>Kentucky, United States</dd>
+    <dt>Address</dt><dd>212 N. 2nd St., Ste 100<br>Richmond, KY 40475</dd>
+    <dt>Contact</dt><dd><a href="mailto:support@ourcharter.org">support@ourcharter.org</a></dd>
+    <dt>Brands</dt><dd>OurCharter is a service of Think Tank LLC.</dd>
+  </dl>
+
+  <h2>Messaging</h2>
+  <p>Text messages sent through our products go only to people who opted in, name the organization they are from, and honor STOP immediately. Details: <a href="https://ourcharter.org/sms-terms">Text Message Terms</a> and <a href="https://ourcharter.org/privacy">Privacy Policy</a>. Mobile information is never shared with third parties or affiliates for marketing purposes.</p>
+
+  <footer>&copy; <span id="y"></span> Think Tank LLC. All rights reserved.</footer>
+</main>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
